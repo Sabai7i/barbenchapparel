@@ -1,0 +1,114 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Responsive Layout */
+@media (max-width: 900px) {
+  .hero-images, .category-cards, .project-cards {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Hero Image Animation */
+.hero-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.hero-images img {
+  width: 120px;
+  height: 120px;
+  border-radius: 1rem;
+  opacity: 0.7;
+  animation: hero-slide 6s linear infinite;
+}
+.hero-images img:nth-child(2) {
+  animation-delay: 2s;
+}
+.hero-images img:nth-child(3) {
+  animation-delay: 4s;
+}
+@keyframes hero-slide {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  20% { opacity: 1; transform: scale(1.1); }
+  40% { opacity: 0.7; transform: scale(1); }
+}
+
+/* Button Hover Effect */
+button {
+  background: #1db954;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #971B20;
+}
+
+/* Card Hover Opacity Effect */
+.category-cards div,
+.project-cards div {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.category-cards div:hover,
+.project-cards div:hover {
+  opacity: 1;
+}
+
+/* Modern Touches */
+.category-cards div,
+.project-cards div {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: box-shadow 0.3s, opacity 0.3s;
+}
+.category-cards div:hover,
+.project-cards div:hover {
+  box-shadow: 0 4px 24px rgba(151,27,32,0.15);
+}
